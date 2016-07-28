@@ -1,0 +1,5 @@
+<td>{{index + 1}}</td>
+<td>{{singleTodo.todo}}</td>
+<td>{{singleTodo.desc}}</td>
+<td>{{singleTodo.status === 0 ? "Not Done" : "Done"}}</td>
+<td><input type="checkbox" (click)="statusChange(singleTodo)"></td>

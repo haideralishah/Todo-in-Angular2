@@ -1,0 +1,28 @@
+<form>
+    <legend>Task To Do</legend>
+    <label>
+        Task: <input type="text" #task>
+    </label>
+    <label>
+        Description: <input type="text" #desc>
+    </label>
+    <button (click)='addTodo(task, desc)'>Add To Do</button>
+
+</form>
+
+
+
+<table>
+    <tr>
+        <td>Sr.</td>
+        <td>Todo</td>
+        <td>Description</td>
+        <td>Status</td>
+        <td>Action</td>
+    </tr>
+    <tr todo *ngFor="let t of todo; let i=index" [singleTodo]='t' [index]='i' (changeStatus)='changeStatus($event)'>
+
+    </tr>
+
+
+</table>
